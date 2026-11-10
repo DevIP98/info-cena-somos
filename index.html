@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cena SOMOS | Próximamente</title>
+  <meta name="description" content="Página oficial de la Cena SOMOS. En espera de la información oficial del evento.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#E0B253',
+              goldLight: '#F3D289',
+              goldDark: '#A87926',
+              dark: '#080A0F',
+              surface: '#0F131D',
+              surfaceLight: '#181F30',
+              accent: '#C59A41',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #080A0F;
+      color: #EDEDED;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Ambient glow elements */
+    .glow-gold {
+      background: radial-gradient(circle, rgba(224, 178, 83, 0.16) 0%, rgba(224, 178, 83, 0.04) 45%, transparent 75%);
+    }
+
+    .glow-violet {
+      background: radial-gradient(circle, rgba(110, 68, 255, 0.12) 0%, rgba(55, 34, 130, 0.03) 50%, transparent 75%);
+    }
+
+    /* Glassmorphism Card */
+    .glass-card {
+      background: rgba(18, 24, 38, 0.65);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(224, 178, 83, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-pill {
+      background: rgba(224, 178, 83, 0.08);
+      border: 1px solid rgba(224, 178, 83, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Gold gradient text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFF0D2 0%, #E0B253 45%, #C59A41 75%, #F7DC9E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Subtle shimmer shine */
+    @keyframes shine {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #bfa05d 0%, #ffffff 50%, #bfa05d 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s ease-in-out infinite;
+    }
+
+    /* Sparkling stars background */
+    .sparkle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.3;
+      animation: twinkle 4s ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.1; transform: scale(0.8); }
+      50% { opacity: 0.8; transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black">
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[750px] glow-gold rounded-full filter blur-3xl"></div>
+    <div class="absolute top-1/3 -left-48 w-[500px] h-[500px] glow-violet rounded-full filter blur-3xl"></div>
+    <div class="absolute -bottom-48 right-0 w-[600px] h-[600px] glow-gold rounded-full filter blur-3xl opacity-70"></div>
+
+    <!-- Geometric background decorative grid/circles -->
+    <div class="absolute inset-0 bg-[radial-gradient(#222b3d_1px,transparent_1px)] [background-size:32px_32px] opacity-25"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="relative z-10 w-full pt-8 px-6 max-w-6xl mx-auto flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <!-- Monogram Icon -->
+      <div class="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-surface/80 backdrop-blur-md shadow-lg shadow-brand-gold/10">
+        <i data-lucide="sparkles" class="w-5 h-5 text-brand-gold"></i>
+      </div>
+      <div>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold/80 block font-semibold">Comunidad & Fe</span>
+        <span class="font-serif text-xl tracking-wider font-semibold text-white">SOMOS</span>
+      </div>
+    </div>
+
+    <!-- Official status badge -->
+    <div class="glass-pill px-4 py-1.5 rounded-full flex items-center space-x-2 text-xs text-brand-goldLight font-medium">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span>En Espera Oficial</span>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 py-12 md:py-16">
+    <div class="w-full max-w-2xl mx-auto text-center">
+
+      <!-- Badge Notification -->
+      <div class="inline-flex items-center gap-2 glass-pill px-4 py-2 rounded-full mb-8 border border-brand-gold/30 shadow-md">
+        <i data-lucide="clock" class="w-4 h-4 text-brand-gold"></i>
+        <span class="text-xs sm:text-sm font-medium tracking-wide text-brand-goldLight uppercase">
+          Portal Oficial del Evento
+        </span>
+      </div>
+
+      <!-- Main Headline / Title -->
+      <div class="space-y-3 mb-6">
+        <p class="text-xs sm:text-sm tracking-[0.35em] text-brand-gold uppercase font-semibold">
+          Gran Encuentro Especial
+        </p>
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+          Cena <span class="text-gold-gradient italic font-normal">SOMOS</span>
+        </h1>
+      </div>
+
+      <!-- Main Status Card -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 my-8 text-left relative overflow-hidden transition-all duration-300">
+        <!-- Top decorative gradient line -->
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-80"></div>
+
+        <div class="flex items-start sm:items-center space-x-4 mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0 text-brand-gold">
+            <i data-lucide="calendar-sync" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-semibold text-white">
+              En Espera de Información Oficial
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-400">
+              Estamos preparando cada detalle para que vivas una experiencia memorable.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed font-light mb-8">
+          Próximamente estaremos publicando todos los detalles oficiales: fecha, horario exacto, menú, código de vestimenta y el enlace para la reserva de entradas. Agradecemos tu paciencia y entusiasmo.
+        </p>
+
+        <!-- Status Highlights Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-white/10">
+          
+          <div class="bg-black/30 rounded-xl p-3.5 border border-white/5 flex flex-col justify-between">
+            <div class="flex items-center space-x-2 text-brand-gold mb-1.5">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span class="text-xs font-semibold uppercase tracking-wider">Fecha</span>
+            </div>
+            <span class="text-xs text-gray-300 font-medium">Por anunciar</span>
+          </div>
+
+          <div class="bg-black/30 rounded-xl p-3.5 border border-white/5 flex flex-col justify-between">
+            <div class="flex items-center space-x-2 text-brand-gold mb-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span class="text-xs font-semibold uppercase tracking-wider">Lugar</span>
+            </div>
+            <span class="text-xs text-gray-300 font-medium">En confirmación</span>
+          </div>
+
+          <div class="bg-black/30 rounded-xl p-3.5 border border-white/5 flex flex-col justify-between">
+            <div class="flex items-center space-x-2 text-brand-gold mb-1.5">
+              <i data-lucide="ticket" class="w-4 h-4"></i>
+              <span class="text-xs font-semibold uppercase tracking-wider">Entradas</span>
+            </div>
+            <span class="text-xs text-gray-300 font-medium">Próximamente</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+        
+        <!-- Refresh Button -->
+        <button onclick="window.location.reload();" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-goldDark via-brand-gold to-brand-goldLight text-black font-semibold text-sm shadow-lg shadow-brand-gold/20 hover:opacity-95 active:scale-95 transition-all">
+          <i data-lucide="rotate-cw" class="w-4 h-4 text-black"></i>
+          <span>Comprobar Actualizaciones</span>
+        </button>
+
+        <!-- Share / WhatsApp Button -->
+        <button id="btnShare" onclick="sharePage()"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium text-sm transition-all active:scale-95">
+          <i data-lucide="share-2" class="w-4 h-4 text-brand-gold"></i>
+          <span>Compartir Enlace</span>
+        </button>
+
+      </div>
+
+      <!-- Quick Notification Notice -->
+      <div id="copyToast" class="opacity-0 transition-opacity duration-300 mt-4 text-xs text-brand-gold font-medium">
+        ✓ Enlace copiado al portapapeles
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 w-full py-8 px-6 text-center border-t border-white/5 text-xs text-gray-500">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2 text-gray-400">
+        <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold/80"></i>
+        <span>Canal Oficial de Difusión • Cena SOMOS</span>
+      </div>
+      <div>
+        <span>Este código QR te mantendrá actualizado en tiempo real.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide script activation & helpers -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Share or Copy Link function
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Cena SOMOS - Próximamente',
+          text: 'En espera de la información oficial del evento Cena SOMOS.',
+          url: window.location.href,
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const toast = document.getElementById('copyToast');
+          toast.classList.remove('opacity-0');
+          setTimeout(() => {
+            toast.classList.add('opacity-0');
+          }, 2500);
+        });
+      }
+    }
+
+    // Dynamic subtle stars generator
+    (function createStars() {
+      const body = document.body;
+      const count = 28;
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.className = 'sparkle pointer-events-none';
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDelay = (Math.random() * 5) + 's';
+        star.style.animationDuration = (3 + Math.random() * 4) + 's';
+        body.appendChild(star);
+      }
+    })();
+  </script>
+</body>
+</html>
